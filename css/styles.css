@@ -1,0 +1,69 @@
+@import './butons.css';
+
+body{
+    background-color: #26B4BC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    max-inline-size: 900px; /*width: 900px;*/
+    margin: auto;
+}
+
+.player{
+    margin-block-start: 100px;/*margen -hacia arriba de 100px*/
+    /* border: 3px solid red; */
+    position: relative;
+}
+
+.player video{
+    inline-size: 100%;
+    aspect-ratio: 16/9; /*se utilizará en el cálculo de tamaños automáticos*/
+    vertical-align: middle; /*Coloca en el medio del elemento principal*/
+    object-fit: cover;
+    
+}
+/*  Bloque es en el eje y, e inline es en el eje x*/
+.player-title{
+    color: #fff;
+    position: absolute;
+    /* inset (recuadro espacio) */
+    /* inset-block-start: 5px; Espacio en el eje y al inicio de 10px */
+    inset-inline-start: 20px ; /*Espacio en el eje x al inicio de 20px*/
+    
+}
+
+.player-actions{
+    position: absolute;
+    /*inset-block-start: 50px; funciona top: 50px;*/
+    inset: 0; /*Top 0 , left 0 , right 0, bottom 0*/    
+    /* border: 10px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* z-index: 10; */
+}
+
+.player-progress{
+    /* background-color: yellow; */
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0; /* para expnadirse 100% */
+    display: flex ;
+    padding: 10px;
+}
+
+.player-progress input{
+    flex: 1;
+}
+
+.player-overlay{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .3s opacity;
+}
+.player:hover .player-overlay{
+    opacity: 1;
+}

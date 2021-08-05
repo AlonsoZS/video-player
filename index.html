@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Video Player</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="player">
+            <!--Title es para darle un titulo cuando pongo mi mouse-->
+            <!--aria-label es para darle un nombre a un boton-->
+            <!--Poster es para la preview del video sin que este haya cargado-->
+            <video id="video" src="https://media.w3.org/2010/05/sintel/trailer.mp4" poster="./images/poster.jpg"></video>
+           
+            <div class="player-overlay">
+                <h2 class="player-title">Música para programar</h2>
+                <div class="player-actions">
+                    <button class="button" id="backward" aria-label="Retoceder  10 segundos"
+                        title="Retoceder  10 segundos" hidden></button>
+                    <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
+                    <button class="button" id="pause" aria-label="Pausa" title="Pausa" hidden></button>
+                    <button class="button" id="forward" aria-label="Adelantar  10 segundos"
+                        title="Adelantar  10 segundos" hidden></button>
+                </div>
+                <div class="player-progress">
+                    <input id="progress" type="range" min="0" value="0" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js">
+
+    </script>
+</body>
+
+</html>
